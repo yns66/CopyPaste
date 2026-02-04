@@ -1,11 +1,12 @@
 Bu scripti, powershell ile EXE ye çevirebilirsiniz.
 Gerekli komutlar aşağıdadır.
 
-Invoke-PS2EXE .\TXT Görüntüleyici-Kopyalayıcı.ps1 .\TXT Görüntüleyici-Kopyalayıcı.exe `
-  -console `
-  -noOutput `
-  -requireAdmin:$false `
-  -title "Hazır Metin Seçici"
+Invoke-PS2EXE .\CopyPaste.ps1 .\CopyPaste.exe `
+>>   -noConsole `
+>>   -noOutput `
+>>   -requireAdmin:$false `
+>>   -icon ".\CopyPaste.ico" `
+>>   -title "Hazır Metin Seçici"
 
 EXE halide mevcuttur.
 
