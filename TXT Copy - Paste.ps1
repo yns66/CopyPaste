@@ -39,7 +39,17 @@ $form.TopMost = $true
 $pathBox = New-Object System.Windows.Forms.TextBox
 $pathBox.Location = New-Object System.Drawing.Point(10,10)
 $pathBox.Size = New-Object System.Drawing.Size(380,25)
-$pathBox.ReadOnly = $true
+$pathBox.ReadOnly = $false
+
+$pathBox.Add_KeyDown({
+    if ($_.KeyCode -eq "Enter") {
+        if (Test-Path $pathBox.Text) {
+            $pathBox.Text | Set-Content $configFile -Encoding UTF8
+            Yukle-TxtDosyalari $pathBox.Text
+        }
+    }
+})
+
 
 $browseBtn = New-Object System.Windows.Forms.Button
 $browseBtn.Location = New-Object System.Drawing.Point(400,8)
