@@ -69,14 +69,14 @@ $pathLabel.ForeColor = [System.Drawing.Color]::Gray
 
 
 $browseBtn = New-Object System.Windows.Forms.Button
-$browseBtn.Location = New-Object System.Drawing.Point(400,8)
-$browseBtn.Size = New-Object System.Drawing.Size(80,50)
-$browseBtn.Text = "Yol Seçin"
+$browseBtn.Location = New-Object System.Drawing.Point(410,8)
+$browseBtn.Size = New-Object System.Drawing.Size(90,50)
+$browseBtn.Text = "YOL SEÇ"
 
 $enterBtn = New-Object System.Windows.Forms.Button
 $enterBtn.Location = New-Object System.Drawing.Point(320,8) # Değiştir'in solu
-$enterBtn.Size = New-Object System.Drawing.Size(80,50)
-$enterBtn.Text = "Enter"
+$enterBtn.Size = New-Object System.Drawing.Size(90,50)
+$enterBtn.Text = "GÖRÜNTÜLE"
 
 $enterBtn.Add_Click({
     if (Test-Path $pathBox.Text) {
